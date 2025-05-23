@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart-Lab Global</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+  </head>
+  <body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-white">
+
+    <header class="w-full max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+      <!-- Logo -->
+      <div class="flex items-center gap-2">
+        <img src="img/logo.png" alt="Logo" class="w-[100px]">
+      </div>
+
+      <!-- Nav Links -->
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a href="#" class="hover:text-orange-500">About Us</a>
+        <a href="#" class="hover:text-orange-500">Capabilities</a>
+        <a href="#" class="hover:text-orange-500">Industries</a>
+        <a href="#" class="hover:text-orange-500">Insights</a>
+        <a href="#" class="hover:text-orange-500">Careers</a>
+        <a href="#" class="hover:text-orange-500">Contact Us</a>
+      </nav>
+
+      <!-- Buttons -->
+      <div class="flex items-center gap-3">
+        <button id="darkModeToggle" class="flex items-center gap-1 px-3 py-1 rounded-full text-sm border border-gray-400 dark:border-gray-600">
+          <a href="#" class="flex items-center justify-center"><img src="img/dark.png"> Dark Mode</a>
+        </button>
+
+        <button id="searchToggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+           <a href="#" class="flex items-center justify-center"><img src="img/search.png"></a>
+        </button>
+
+        <!-- Hamburger -->
+        <button id="menuToggle" class="md:hidden p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden px-4 py-3 space-y-2">
+      <a href="#" class="block hover:text-orange-500">About Us</a>
+      <a href="#" class="block hover:text-orange-500">Capabilities</a>
+      <a href="#" class="block hover:text-orange-500">Industries</a>
+      <a href="#" class="block hover:text-orange-500">Insights</a>
+      <a href="#" class="block hover:text-orange-500">Careers</a>
+      <a href="#" class="block hover:text-orange-500">Contact Us</a>
+    </div>
+
+    <!-- Search Bar -->
+    <div id="searchBar" class="hidden px-4 py-3 max-w-7xl mx-auto">
+      <input type="text" placeholder="Search..." class="w-full p-2 border rounded-md dark:bg-gray-800 dark:text-white"/>
+    </div>
+
+
+    <!-- hero section -->
+
+    <section class="relative w-full min-h-[600px] sm:min-h-[700px] md:min-h-[620px] lg:min-h-[628px] xl:min-h-[650px] bg-cover bg-center mt-4 bg-gray-100 ">
+    
+        <div class="absolute inset-0 polygon-black bg-gray-500 bg-opacity-90 backdrop-blur-sm z-10"></div> 
+        <div class="absolute inset-0 polygon-white bg-gray-700 bg-opacity-90 backdrop-blur-sm z-10"></div> 
+        <div class="absolute inset-0 polygon-bg-hero bg-gray-700 bg-opacity-90 backdrop-blur-sm z-10 bg-no-repeat bg-cover bg-center" style="background-image: url('img/hero.gif'); background-color: #111 "></div>
+
+            <div class="bg-opacity-90 backdrop-blur-sm max-w-full h-full flex flex-col items-center">
+            <div class="w-full max-w-7xl mx-auto px-6 sm:py-6 xl:pt-20 md:py-2 sm:px-6">
+                <div class="max-w-xl text-center xs:text-center sm:text-center md:text-center lg:text-left xl:text-left">
+                        <h2 class="text-[#414042] text-3xl font-extrabold py-4">Sprint to Scale</h2>
+                        <p class="text-[15px] text-[#414042] py-4">Committed to shaping the future of business, driving rapid transformation with lasting innovation and robust growth.</p>
+                        <button class="bg-gray-800 text-white font-medium py-3 px-6 rounded-full hover:bg-gray-700 transition">
+                        Explore Our Services
+                        </button>
+                </div>
+            </div>
+
+            </div>
+
+            <!-- Social + Scroll Indicators -->
+            <div class="absolute z-40 text-white flex flex-col items-center space-y-4 right-4 bottom-2 sm:absolute sm:top-1/2 sm:bottom-auto sm:right-4">
+                <a href="#"><img src="img/youtube.png" alt="YouTube" class="h-5 w-5" /></a>
+                <a href="#"><img src="img/linkedin.png" alt="LinkedIn" class="h-5 w-5" /></a>
+                <a href="#"><img src="img/twitter.png" alt="X" class="h-5 w-5" /></a>
+                <div class="w-px h-20 bg-white my-2"></div>
+                <div class="text-xs">Scroll Down</div>
+                <a href="#"> <img src="img/scroll.png" class="animate-bounce"></a>
+            </div>
+    </section>
+
+
+    <section class="relative w-full h-auto xl:h-[828px] lg:h-[620px] sm:h-[700px] bg-cover bg-center mt-4" style="background-image: url('img/side2.jpg'); background-color: #111">
+      <div class="polygon-shaping bg-white bg-opacity-90 backdrop-blur-sm max-w-full h-full flex flex-col items-center">
+          <div class="w-full max-w-7xl mx-auto pt-[200px] px-6 sm:py-6 xl:pt-44 md:py-2 sm:px-6">
+              <div class="max-w-xl">
+                  <h2 class="whitespace-pre-line text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
+                    Shaping a
+                    Sustainable Future
+                  </h2>
+                  <div class="flex items-center gap-10 my-10">
+                      <div class="max-w-[255]">
+                          <p class="text-3xl font-semibold text-gray-900">30%</p>
+                          <p class="text-sm text-gray-600 mt-2 max-w-xs mx-auto">
+                            reduction in data center energy consumption in 2023.
+                          </p>
+                      </div>
+                      <div class="w-[2px] h-20 bg-gray-600"></div>
+                      <div class="max-w-[255]">
+                          <p class="text-3xl font-semibold text-gray-900">30%</p>
+                          <p class="text-sm text-gray-600 mt-2 max-w-xs mx-auto">
+                            projects that optimized waste management processes with AI-powered solutions.
+                          </p>
+                      </div>
+                  </div>
+                  <p class="text-gray-600 mb-6">Take the next step towards sustainability</p>
+                      <button class="bg-gray-800 text-white font-medium py-3 px-6 rounded-full hover:bg-gray-700 transition">
+                      Meet Smart-Lab Global
+                    </button>
+              </div>
+          </div>
+
+          <div class="w-full relative px-4">
+            <div class="">
+              <div class="max-w-7xl mx-auto ">
+                  <div class="text-center">
+                    <h2 class="text-2xl sm:text-3xl mb-4 mt-4">Spotlight on Smart-Lab Global Insights</h2>
+                    <p class="text-sm sm:text-base mb-8 max-w-xl mx-auto">
+                      With a footprint in over 7+ industries, we bring expertise from finance and telecom to media and beyond, that elevates businesses to new heights.
+
+                    </p>
+                  </div>
+
+                  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 bg-[#414042] text-white text-center">
+                    <div class="border-b last:border-b-0 sm:border-b-0 sm:border-r last:sm:border-r-0 border-gray-600 p-4">
+                      <h4 class="text-xl sm:text-2xl font-semibold text-[#F4F4F4]">12+ Years</h4>
+                      <p class="text-sm">of Expertise</p>
+                      <p class="text-sm">of combined team experience in tech innovation</p>
+                    </div>
+                    <div class="border-b last:border-b-0 sm:border-b-0 sm:border-r last:sm:border-r-0 border-gray-600 p-4">
+                      <h4 class="text-xl sm:text-2xl font-semibold text-[#F4F4F4]">5 Global</h4>
+                      <p class="text-sm">Offices</p>
+                      <p class="text-sm">Bangladesh (HQ), Australia, USA, Dubai, Canada, Germany</p>
+                    </div>
+                    <div class="border-b last:border-b-0 sm:border-b-0 sm:border-r last:sm:border-r-0 border-gray-600 p-4">
+                      <h4 class="text-xl sm:text-2xl font-semibold text-[#F4F4F4]">150+ Active</h4>
+                      <p class="text-sm">Clients</p>
+                      <p class="text-sm">across diverse sectors and geographies</p>
+                    </div>
+                    <div class="border-b last:border-b-0 sm:border-b-0 sm:border-r last:sm:border-r-0 border-gray-600 p-4">
+                      <h4 class="text-xl sm:text-2xl font-semibold text-[#F4F4F4]">100+ Skilled</h4>
+                      <p class="text-sm">Professionals</p>
+                      <p class="text-sm">driving innovation and results</p>
+                    </div>
+                    <div class="border-b last:border-b-0 sm:border-b-0 sm:border-r last:sm:border-r-0 border-gray-600 p-4">
+                      <h4 class="text-xl sm:text-2xl font-semibold text-[#F4F4F4]">7+ Business</h4>
+                      <p class="text-sm">Domains</p>
+                      <p class="text-sm">served with customized digital solutions</p>
+                    </div>
+                    <!-- Repeat/replace other cards -->
+                  </div>
+            </div>
+            </div>
+          </div>
+
+      </div>
+
+    </section>
+
+     <section class="relative w-full h-[600px] xl:h-[628px] lg:h-[620px] sm:h-[700px] bg-cover bg-center mt-4" style="background-image: url('img/spark.jpg'); background-color: #111">
+        <div class="polygon-spark bg-white bg-opacity-90 backdrop-blur-sm max-w-full h-full flex flex-col items-center">
+          <div class="w-full max-w-7xl mx-auto px-6 sm:py-6 xl:pt-20 md:py-2 sm:px-6">
+              <div class="max-w-xl ml-auto text-center xs:text-center sm:text-center md:text-center lg:text-left xl:text-left">
+                    <h2 class="text-[#414042] text-3xl font-extrabold py-4">Spark</h2>
+                    <p class="text-[15px] text-[#414042] py-4">The inspiration behind our brand is "Spark." It symbolizes our innovative, creative, and transformative culture, which spurs advancement and opens up new opportunities for companies and sectors. "Spark" propels the future by pushing the envelope to produce enduring influence and constructive change.</p>
+                    <button class="bg-gray-800 text-white font-medium py-3 px-6 rounded-full hover:bg-gray-700 transition">
+                      Explore Our Services
+                    </button>
+              </div>
+          </div>
+
+        </div>
+  </section>
+
+    <section class="max-w-7xl mx-auto px-4 py-16">
+        <div class="flex items-center justify-between mb-6">
+            <h2 class="text-xl font-bold">Explore More</h2>
+            <div class="flex space-x-2">
+            <button class="swiper-button-prev-custom w-10 h-10 flex items-center justify-center border border-gray-300 rounded-full hover:bg-gray-100">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <button class="swiper-button-next-custom w-10 h-10 flex items-center justify-center border border-orange-500 rounded-full hover:bg-orange-100 text-orange-500">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                </svg>
+            </button>
+            </div>
+        </div>
+
+        
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+            <!-- Slide -->
+            <div class="swiper-slide group relative overflow-hidden rounded-lg cursor-pointer">
+                <img src="img/zoom2.jpg" alt="News"
+                    class="h-72 w-full object-cover transform transition-transform duration-300 group-hover:scale-105">
+                <div class="absolute bottom-0 w-full bg-gradient-to-t from-black via-transparent to-transparent p-4">
+                <p class="text-white font-semibold">News</p>
+                </div>
+            </div>
+
+            <!-- More Slides -->
+            <div class="swiper-slide group relative overflow-hidden rounded-lg cursor-pointer">
+                <img src="img/zoom2.jpg" class="h-72 w-full object-cover transform transition-transform duration-300 group-hover:scale-105" />
+            </div>
+
+            <div class="swiper-slide group relative overflow-hidden rounded-lg cursor-pointer">
+                <img src="img/zoom2.jpg" class="h-72 w-full object-cover transform transition-transform duration-300 group-hover:scale-105" />
+            </div>
+
+            <div class="swiper-slide group relative overflow-hidden rounded-lg cursor-pointer">
+                <img src="img/zoom2.jpg" class="h-72 w-full object-cover transform transition-transform duration-300 group-hover:scale-105" />
+            </div>
+            <div class="swiper-slide group relative overflow-hidden rounded-lg cursor-pointer">
+                <img src="img/zoom2.jpg" class="h-72 w-full object-cover transform transition-transform duration-300 group-hover:scale-105" />
+            </div>
+
+            <div class="swiper-slide group relative overflow-hidden rounded-lg cursor-pointer">
+                <img src="img/zoom2.jpg" class="h-72 w-full object-cover transform transition-transform duration-300 group-hover:scale-105" />
+            </div>
+
+            <div class="swiper-slide group relative overflow-hidden rounded-lg cursor-pointer">
+                <img src="img/zoom2.jpg" class="h-72 w-full object-cover transform transition-transform duration-300 group-hover:scale-105" />
+            </div>
+
+            <div class="swiper-slide group relative overflow-hidden rounded-lg cursor-pointer">
+                <img src="img/zoom2.jpg" class="h-72 w-full object-cover transform transition-transform duration-300 group-hover:scale-105" />
+            </div>
+
+            <div class="swiper-slide group relative overflow-hidden rounded-lg cursor-pointer">
+                <img src="img/zoom2.jpg" class="h-72 w-full object-cover transform transition-transform duration-300 group-hover:scale-105" />
+            </div>
+
+            </div>
+        </div>
+        </section>
+
+   
+
+  <section class="w-full bg-[#414042] py-10">
+      <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-center justify-between px-4 gap-6 text-center sm:text-center md:text-center lg:text-left xl:text-left">
+          
+          <div class="">
+              <h2 class="text-[#F4F4F4] text-3xl font-bold">Join Our Team</h2>
+              <p class="text-[#F4F4F4] text-[17px] font-semibold">Shape the future of tech with us.</p>
+          </div>
+          <div class="">
+              <button class="bg-white rounded-[20px] px-3 py-2">Explore Careers</button>
+          </div>
+          
+      </div>
+  </section>
+
+  <footer class="bg-white w-full py-20">
+      <div class="w-full max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-12 items-center">
+
+          <!-- Logo Section -->
+          <div class="flex justify-center sm:justify-start">
+            <img src="img/Logo.png" class="w-32" alt="Company Logo">
+          </div>
+
+          <!-- Navigation Links -->
+          <div class="grid grid-cols-2 gap-6 text-gray-950 text-sm text-center sm:text-left">
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:text-[#414042] transition-colors duration-300">About Us</a></li>
+              <li><a href="#" class="hover:text-[#414042] transition-colors duration-300">Expertise</a></li>
+              <li><a href="#" class="hover:text-[#414042] transition-colors duration-300">Industries</a></li>
+            </ul>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:text-[#414042] transition-colors duration-300">Insights</a></li>
+              <li><a href="#" class="hover:text-[#414042] transition-colors duration-300">Careers</a></li>
+              <li><a href="#" class="hover:text-[#414042] transition-colors duration-300">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Section -->
+          <div class="flex flex-col space-y-2 text-gray-950 items-center xl:items-start">
+            <h2 class="font-bold text-xl">Contact Us</h2>
+            <p>Let’s talk ideas, innovation, and impact.</p>
+            <button class="bg-[#414042] hover:bg-[#333333] text-white py-2 px-6 rounded-[20px] w-40 transition-colors duration-300">
+              Get in Touch
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+
+ 
+
+  <section class="bg-white w-full py-8 border-t items-center text-center px-4">
+      <div class="w-full max-w-7xl mx-auto">
+        <!-- Footer Bottom Section -->
+        <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 gap-4 text-center">
+          <div class="space-x-4">
+            <ul class="flex space-x-2">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Use</a></li>
+            </ul>
+          </div>
+          <div class="flex gap-4">
+              <a href="#">
+                <img src="img/youtube.png" class="w-[24px] h-[25px]">
+              </a>
+              <a href="#">
+                <img src="img/linkedin.png" class="w-[24px] h-[25px]">
+              </a>
+              <a href="#">
+                <img src="img/twitter.png" class="w-[24px] h-[25px]">
+              </a>
+          </div>
+
+          <div>
+            <p>@ Smart-Lab Global 2025</p>
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+
+
+
+
+  <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+
+
+
+<script>
+  new Swiper('.mySwiper', {
+    slidesPerView: 'auto',
+    spaceBetween: 16,
+    navigation: {
+      nextEl: '.swiper-button-next-custom',
+      prevEl: '.swiper-button-prev-custom',
+    },
+    freeMode: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    watchSlidesProgress: true,
+  });
+</script>
+
+    <script>
+      const darkToggle = document.getElementById('darkModeToggle');
+      const searchToggle = document.getElementById('searchToggle');
+      const menuToggle = document.getElementById('menuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const searchBar = document.getElementById('searchBar');
+
+      darkToggle.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+      });
+
+      searchToggle.addEventListener('click', () => {
+        searchBar.classList.toggle('hidden');
+      });
+
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    </script>
+  </body>
+</html>
