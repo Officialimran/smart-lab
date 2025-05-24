@@ -64,3 +64,15 @@
     .swiper-slide:not(:first-child):not(:last-child):hover img {
       transform-origin: center center;
     }
+
+
+
+
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
