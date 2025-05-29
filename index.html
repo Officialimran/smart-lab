@@ -10,70 +10,102 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
   </head>
-  <body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-white font-[Poppins]">
+  <body class="font-poppins">
 
-    <header class="w-full max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
-      <!-- Logo -->
-      <div class="flex items-center gap-2">
-         <img src="img/Logo.png" class="w-32" alt="Smart Lab Global">
-      </div>
+    <header class="w-full bg-[#E6E7E8] fixed top-0 left-0 z-50">
+        <nav class="w-full max-w-[1200px] mx-auto flex relative items-center justify-between px-4 py-2">
+            <a href="#">
+              <!-- Mobile Logo -->
+              <img src="/img/logo.png" alt="Smart Lab Global Mobile" class="block lg:hidden w-[100px] h-[35px]">
+              
+              <!-- Desktop Logo -->
+              <img src="/img/logo.png" alt="Smart Lab Global Desktop" class="hidden lg:block w-[165px] h-[55px]">
+            </a>
+            
+            <div class="lg:hidden justify-center items-center space-x-2 flex flex-wrap text-[#4D4D4F]">
+                <div class="flex items-center space-x-2">
+                  <!-- Dark Mode Button with right border -->
+                  <button id="darkModeToggle" class="flex items-center gap-1 pr-4 py-1 border-r border-solid border-[#41404233]">
+                    <a href="#" class="flex items-center text-[#4D4D4F] text-[12px] space-x-1 border border-solid border-[#41404233] rounded-full p-1">
+                      <img src="img/dark.png" class="w-[20px]" alt="Dark Mode Icon">
+                      <span>Dark Mode</span>
+                    </a>
+                  </button>
 
-      <!-- Nav Links -->
-      <nav class="hidden md:flex gap-6 text-sm">
-        <a href="#" class="hover:text-orange-500">About Us</a>
-        <a href="#" class="hover:text-orange-500">Capabilities</a>
-        <a href="#" class="hover:text-orange-500">Industries</a>
-        <a href="#" class="hover:text-orange-500">Insights</a>
-        <a href="#" class="hover:text-orange-500">Careers</a>
-        <a href="#" class="hover:text-orange-500">Contact Us</a>
-      </nav>
+                  <!-- Search Button -->
+                  <button id="searchToggle" class="p-2 rounded-full">
+                    <a href="#" class="flex items-center justify-center">
+                      <img src="img/search.png" class="w-[20px]" alt="Search Icon">
+                    </a>
+                  </button>
+                </div>
+                <button id="menu-toggle" class="navbar-burger flex items-center text-gray-400 p-2 lg:hidden">
+                    <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
 
-      <!-- Buttons -->
-      <div class="flex items-center gap-3">
-        <button id="darkModeToggle" class="flex items-center gap-1 px-3 py-1 rounded-full text-sm border border-gray-400 dark:border-gray-600">
-          <a href="#" class="flex items-center justify-center"><img src="img/dark.png"> Dark Mode</a>
-        </button>
+            
 
-        <button id="searchToggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
-           <a href="#" class="flex items-center justify-center"><img src="img/search.png"></a>
-        </button>
+            <ul class="hidden absolute top-1/2 left-1/2 text-[14px] font-semibold transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6 font-poppins">
+                <li><a href="#" class="text-[#4D4D4F]">About Us</a></li>
+                <li><a href="#" class="text-[#4D4D4F]">Capabilities</a></li>
+                <li><a href="#" class="text-[#4D4D4F]">Industries</a></li>
+                <li><a href="#" class="text-[#4D4D4F]">Insights</a></li>
+                <li><a href="#" class="text-[#4D4D4F]">Careers</a></li>
+                <li><a href="#" class="text-[#4D4D4F]">Contact Us</a></li>
+            </ul>
 
-        <!-- Hamburger -->
-        <button id="menuToggle" class="md:hidden p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-        </button>
-      </div>
+            <div class="hidden lg:inline-block font-poppins">
+                <ul class="flex flex-wrap items-center justify-between space-x-2 text-[#4D4D4F]">
+                    <li class="border-r border-dotted border-[#41404233] pr-4"><a href="" class="flex items-center space-x-2 border border-solid border-[#41404233] rounded-full py-[3px] px-[5px]"><img src="img/dark.png" class="w-[33px] h-[32px]"> <span>Dark Mode</span></a></li>
+                    <li><a href="#" class="flex items-center justify-center"><img src="img/search.png"></a></li>
+                </ul>
+            </div>
+            
+        </nav>
+
+        <div id="mobile-menu" class="navbar-menu relative hidden z-50">
+            <nav class="fixed top-0 right-0 bottom-0 flex flex-col w-5/6 max-w-screen-lg px-6 bg-[#E6E7E8] border-r overflow-y-auto">
+                <div class="flex items-center mb-4">
+                    <button class="navbar-close flex items-center text-gray-600 p-3 lg:hidden">
+                        <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+
+                </div>
+                <div>
+                    <ul class="flex flex-col justify-center space-y-6 text-[14px] text-[#4D4D4F] font-poppins">
+                        <li><a href="#" class="block hover:text-[#4D4D4F]">About Us</a></li>
+                        </li><a href="#" class="block hover:text-[#4D4D4F]">Capabilities</a></li>
+                        </li><a href="#" class="block hover:text-[#4D4D4F]">Industries</a></li>
+                        </li><a href="#" class="block hover:text-[#4D4D4F]">Insights</a></li>
+                        </li><a href="#" class="block hover:text-[#4D4D4F]">Careers</a></li>
+                        </li><a href="#" class="block hover:text-[#4D4D4F]">Contact Us</a></li>
+                    </ul>
+                    
+                </div>
+            </nav>
+        </div>
+        
     </header>
-
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="hidden md:hidden px-4 py-3 space-y-2 font-poppins">
-      <a href="#" class="block hover:text-orange-500">About Us</a>
-      <a href="#" class="block hover:text-orange-500">Capabilities</a>
-      <a href="#" class="block hover:text-orange-500">Industries</a>
-      <a href="#" class="block hover:text-orange-500">Insights</a>
-      <a href="#" class="block hover:text-orange-500">Careers</a>
-      <a href="#" class="block hover:text-orange-500">Contact Us</a>
-    </div>
-
-    <!-- Search Bar -->
-    <div id="searchBar" class="hidden px-4 py-3 max-w-7xl mx-auto">
-      <input type="text" placeholder="Search..." class="w-full p-2 border rounded-md dark:bg-gray-800 dark:text-white"/>
-    </div>
 
 
     <!-- hero section -->
 
-    <section class="relative w-full min-h-[600px] sm:min-h-[700px] md:min-h-[620px] lg:min-h-[628px] xl:min-h-[650px] bg-cover bg-center mt-4 bg-gray-100 ">
-    
+    <section class="relative w-full min-h-[600px] sm:min-h-[700px] md:min-h-[620px] lg:min-h-[628px] xl:min-h-[650px] bg-cover bg-center mt-[70px] bg-gray-100 ">
+      <div class="max-w-[1200px] mx-auto items-center justify-center flex">
         <div class="absolute inset-0 polygon-black bg-gray-500 bg-opacity-90 backdrop-blur-sm z-10"></div> 
         <div class="absolute inset-0 polygon-white bg-gray-700 bg-opacity-90 backdrop-blur-sm z-10"></div> 
         <div class="absolute inset-0 polygon-bg-hero bg-gray-700 bg-opacity-90 backdrop-blur-sm z-10 bg-no-repeat bg-cover bg-center" style="background-image: url('img/hero.gif'); background-color: #111 "></div>
 
             <div class="bg-opacity-90 backdrop-blur-sm max-w-full h-full flex flex-col items-center">
-                <div class="w-full max-w-7xl mx-auto px-6 sm:py-6 xl:pt-20 md:py-2 sm:px-6">
+                <div class="max-w-7xl px-6 sm:py-6 xl:pt-20 md:py-2 sm:px-6">
                     <div class="max-w-xl text-center xs:text-center sm:text-center md:text-center lg:text-left xl:text-left">
                             <h2 class="text-[#414042] text-3xl font-extrabold py-4 font-poppins">Sprint to Scale</h2>
                             <p class="text-[15px] text-[#414042] py-4 font-poppins">Committed to shaping the future of business, driving rapid transformation with lasting innovation and robust growth.</p>
@@ -94,7 +126,19 @@
                 <div class="text-xs">Scroll Down</div>
                 <a href="#"> <img src="img/scroll.png" class="animate-bounce"></a>
             </div>
+        </div>
     </section>
+
+   <header class="flex items-center px-4 py-2 bg-gray-800 text-white">
+  <div class="text-lg font-bold">Logo</div>
+  <nav class="grow flex justify-center gap-4">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+  <div class="text-sm">Login</div>
+</header>
+
 
     <div class="w-full px-4 max-w-7xl mx-auto">
         <div class="flex flex-wrap gap-4 max-w-xl">
@@ -794,6 +838,28 @@
         mobileMenu.classList.toggle('hidden');
       });
   </script>
+
+
+      <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const burger = document.querySelector("#menu-toggle");
+            const menu = document.querySelector("#mobile-menu");
+            const closeBtn = document.querySelector(".navbar-close");
+
+              if (burger && menu) {
+              burger.addEventListener("click", function () {
+                  menu.classList.toggle("hidden");
+              });
+              }
+
+              if (closeBtn && menu) {
+              closeBtn.addEventListener("click", function () {
+                  menu.classList.add("hidden");
+              });
+              }
+          });
+      </script>
+
 
   </body>
 </html>
