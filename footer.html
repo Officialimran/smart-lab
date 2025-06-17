@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Lab</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+            roboto: ['Roboto', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <footer class="bg-[#FFFFFF] w-full py-16">
+  <div class="w-full max-w-[1200px] mx-auto px-4 self-start">
+    <div class="grid grid-cols-1 sm:grid-cols-3">
+
+      <!-- Logo Section -->
+      <div class="flex justify-center sm:justify-start">
+        <img src="img/Logo.png" class="w-[165px] h-[55px] mb-[60px] sm:mb-0 mt-[10px]" alt="Smart Lab Global" />
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="grid grid-cols-2 justify-center text-left text-[#414042] font-poppins mb-[60px] sm:mb-0">
+        <div class="flex flex-col items-center sm:items-start text-left">
+            <ul class="leading-[30px] text-[14px]">
+              <li><a href="#" class="inline-block font-normal">About Us</a></li>
+              <li><a href="#" class="inline-block font-normal">Expertise</a></li>
+              <li><a href="#" class="inline-block font-normal">Industries</a></li>
+          </ul>
+        </div>
+        <div class="flex flex-col items-center sm:items-start text-left">
+            <ul class="leading-[30px] text-[14px]">
+              <li><a href="#" class="inline-block font-normal">Insights</a></li>
+              <li><a href="#" class="inline-block font-normal">Careers</a></li>
+              <li><a href="#" class="inline-block font-normal">Contact</a></li>
+          </ul>
+        </div>
+        
+      </div>
+
+      <!-- Contact Section -->
+      <div class="flex flex-col items-center xl:items-start font-poppins">
+        <h2 class="font-semibold text-[24px] md:text-[30px] text-[#414042]">Contact Us</h2>
+        <p class="font-normal text-[14px] text-[#414042] mb-4 leading-[24px]">Let’s talk ideas, innovation, and impact.</p>
+        <button class="text-[14px] bg-[#414042] text-[#F4F4F4] py-[14px] px-[21px] rounded-[77px] transition-colors duration-300 hover:bg-[#414042] font-normal">
+          Get in Touch
+        </button>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+  <section class="bg-[#FFFFFF] w-full py-8 border-t items-center text-center px-4">
+      <div class="w-full max-w-[1200px] mx-auto">
+        <!-- Footer Bottom Section -->
+        <div class="flex flex-col md:flex-row justify-between items-center text-[#414042] text-[14px] gap-4 text-center font-poppins">
+          <div class="space-x-4">
+            <ul class="flex space-x-2">
+              <li><a href="#">Privacy Policy</a></li>
+              <li>•</li>
+              <li><a href="#">Terms of Use</a></li>
+            </ul>
+          </div>
+          <div class="flex gap-4">
+              <a href="#">
+                <img src="img/youtube.png" class="w-[24px] h-[24px]">
+              </a>
+              <a href="#">
+                <img src="img/linkedin.png" class="w-[24px] h-[24px]">
+              </a>
+              <a href="#">
+                <img src="img/twitter.png" class="w-[24px] h-[24px]">
+              </a>
+          </div>
+
+          <div>
+            <p class="text-[14px] font-roboto font-normal">@ Smart-Lab Global 2025</p>
+          </div>
+        </div>
+      </div>
+  </section>
+
+</body>
+</html>
